@@ -30,7 +30,7 @@ const Page = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
           <div className="bg-white bg-opacity-70 rounded-lg p-8">
             <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
-              مجموغه تشریفاتی شاتو دو ورسای
+              مجموعه تشریفاتی شاتو دو ورسای
             </h1>
             <p className="text-xl mb-4">لاکچری ترین باغ تالار تهران</p>
             <button className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4" onClick={handleButtonClick2}>
