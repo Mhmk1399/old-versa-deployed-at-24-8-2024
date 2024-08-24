@@ -30,9 +30,9 @@ const Page = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
           <div className="bg-white bg-opacity-70 rounded-lg p-8">
             <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
-              مجموعه تشریفاتی شاتو دو ورسای
+              مجموغه تشریفاتی شاتو دو ورسای
             </h1>
-            <p className="text-xl text-gray-100 mb-4">لاکچری ترین باغ تالار تهران</p>
+            <p className="text-xl mb-4">لاکچری ترین باغ تالار تهران</p>
             <button className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4" onClick={handleButtonClick2}>
               دریافت قیمت و رزرو زمان بازدید
             </button>
@@ -48,10 +48,11 @@ const Page = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {sectionsData.map((section, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden grid grid-rows-1">
-                <div className="grid grid-rows items-center justify-center text-center">
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden grid grid-rows-1 text-center">
+                <div className="grid grid-rows items-center justify-center">
                   
-                    <InteractiveTimeline category={section.category} />
+                  <InteractiveTimeline category={section.category} />
+                  </div>
                   
                   <div className="w-full mt-16 ">
                     <Image alt="sliding-sign" src="/sliding.jfif" width={40} height={40} className="mx-auto mb-4" />
@@ -67,7 +68,7 @@ const Page = () => {
                       مشاهده بیشتر
                     </button>
                   </div>
-                </div>
+                
               </div>
             ))}
           </div>
