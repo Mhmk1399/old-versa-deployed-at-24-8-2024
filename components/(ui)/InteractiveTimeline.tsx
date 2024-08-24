@@ -88,44 +88,44 @@ export default function InteractiveTimeline({ category }: { category: string }) 
 
   return (
     <div
-      className="flex flex-col items-center justify-center h-auto w-full p-4"
-      onMouseMove={isDragging ? handleDrag : undefined}
-      onTouchMove={isDragging ? handleDrag : undefined}
-      onMouseUp={stopDrag}
-      onTouchEnd={stopDrag}
-    >
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
-        {stops[currentStop].map((url: string, index: number) => (
-          <div
-            key={index}
-            className="relative w-auto h-auto bg-white shadow-lg rounded-lg overflow-hidden mx-auto transition-transform duration-300 hover:scale-105"
-          >
-            <Image
-              src={url}
-              alt={`Image ${index + 1}`}
-              width={400}
-              height={400}
-              className="rounded-lg"
-              onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                console.error(`Error loading image ${index + 1}: ${e.currentTarget.src}`);
-              }}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="w-full max-w-3xl relative mt-4">
+    className="flex flex-col items-center justify-center h-auto w-full p-4 bg-gradient-to-br from-gray-100 via-white to-gray-200"
+    onMouseMove={isDragging ? handleDrag : undefined}
+    onTouchMove={isDragging ? handleDrag : undefined}
+    onMouseUp={stopDrag}
+    onTouchEnd={stopDrag}
+  >
+    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-4">
+      {stops[currentStop].map((url: string, index: number) => (
+        <div
+          key={index}
+          className="relative w-full h-auto bg-white shadow-lg rounded-lg overflow-hidden mx-auto transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <Image
+            src={url}
+            alt={`Image ${index + 1}`}
+            width={400}
+            height={400}
+            className="rounded-lg"
+            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+              console.error(`Error loading image ${index + 1}: ${e.currentTarget.src}`);
+            }}
+          />
+        </div>
+      ))}
+    </div>
+      <div className="w-full max-w-3xl relative mt-4 text-center">
         <div
           ref={timelineRef}
           className="relative h-4 bg-green-500 rounded-full mb-12 shadow-xl mt-4"
           style={{
-            height: "4px",
+            height: "8px",
           }}
         >
-          <div className="flex justify-between items-center mb-8 w-full">
-            <ul className="flex justify-between w-full px-4">
-              <li className="text-start font-medium text-gray-700">دیزاین پایه</li>
-              <li className="text-center px-4 font-medium text-gray-700">دیزاین ویژه</li>
-              <li className="text-end font-medium text-gray-700" dir="rtl">
+          <div className="flex  mb-8 w-full">
+            <ul className="flex w-full px-6 text-center">
+              <li className="text-start font-medium text-gray-700 px-6">دیزاین پایه</li>
+              <li className="text-center px-6 font-medium text-gray-700">دیزاین ویژه</li>
+              <li className="text-end font-medium text-gray-700 px-4" dir="rtl">
                 دیزاین VIP
               </li>
             </ul>
