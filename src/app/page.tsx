@@ -49,7 +49,7 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {sectionsData.map((section, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden grid grid-rows-1">
-                <div className="grid grid-rows items-center justify-center">
+                <div className="grid grid-rows items-center justify-center text-center">
                   
                     <InteractiveTimeline category={section.category} />
                   
