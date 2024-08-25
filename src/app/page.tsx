@@ -8,7 +8,7 @@ import { FaPhoneAlt, FaInstagram, FaTelegramPlane, FaWhatsapp } from 'react-icon
 
 const Page = () => {
   const handleButtonClick = () => {
-    window.location.href = '/gallery';
+    window.location.href = '/galery';
   };
   const handleButtonClick2 = () => {
     window.location.href = '/menue';
