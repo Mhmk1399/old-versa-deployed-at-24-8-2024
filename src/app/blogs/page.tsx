@@ -1,50 +1,45 @@
-import Image from 'next/image'
-import {blogData} from '../../../lib/data';
+"use client"
 
+import Image from 'next/image'
+
+const handleButtonClick = () => {
+    window.location.href = '/kakhversi-gulidness-for-wedding-in-tehran';
+}
 
 const page = () => {
     return (
-        <div className='bg-white  grid mx-auto grid-cols-1 '>
-            <div className='px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4'>
-                {blogData.map((blog, index) => (
-                    blog.contetTitle.map((title, i) => (
-                        <div key={i} className='col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg'>
-                            <div className='mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg'>
-                                <Image 
-                                    src={blog.image[i % blog.image.length]} 
-                                    width={400} 
-                                    height={400} 
-                                    alt='versailles' 
-                                    className='rounded-lg shadow-lg w-auto h-auto' 
-                                />
-                            </div>
-                            <div className='mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center'>
-                                <h1 id='contetTitle' className='text-2xl font-bold mx-auto'>{title}</h1>
-                                <p id='contentDiscription' className='text-regular mx-auto mt-2'>{blog.contentDiscription[i]}</p>
-                            </div>
+        <div>
+
+            {/* راهنمای  انتخاب بهترین تالار در تهران */}
+
+            <div className="p-1 flex flex-wrap items-center justify-center" onClick={handleButtonClick}>
+
+                <div className="flex-shrink-0 m-6 relative overflow-hidden bg-green rounded-lg max-w-xs shadow-lg">
+                    <svg className="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none"
+                        style={{ transform: "scale(1.5)", opacity: 0.1 }}>
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                    </svg>
+                    <div className="relative pt-10 px-10 flex items-center justify-center">
+                        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                            style={{ background: "radial-gradient(black, transparent 60%)", transform: "rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1)", opacity: 0.2 }}>
                         </div>
-                    ))
-                ))}
-                
-                <div className='col-span-2 mx-auto width-full my-2 px-1.5 py-1.5 bg-white rounded-lg text-start mt-8 mb-16 pb-16' dir='rtl'>
-                    <div className='text-start text-blue-500 font-bold text-medium'>
-                        تاریخ اخرین آپدیت : {new Date().toLocaleString('fa-IR')}
+                        <Image className="relative w-40" src="/logoversai.png" alt="" width={4000} height={4000} />
                     </div>
-                    <div className='mt-2 text-start text-green text-regular border-t border-green rounded px-4'>
-                        <ol className='list-decimal list-inside'>
-                            {blogData[0].refrences.map((ref, i) => (
-                                <li key={i} className='py-2 border-b border-green'>
-                                    <a href={ref.link} target="_blank" rel="noopener noreferrer" className='text-blue-500'>
-                                        {ref.title}
-                                    </a>
-                                </li>
-                            ))}
-                        </ol>
+                    <div className="relative text-white px-6 pb-6 mt-6">
+                        <span className="block opacity-75 -mb-1"></span>
+                        <div className="flex justify-between">
+                            <span className="block text-regular ">راهنمای انتخاب بهترین تالار در تهران</span>
+
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
-    );
+
+    )
 }
 
-export default page;
+export default page
