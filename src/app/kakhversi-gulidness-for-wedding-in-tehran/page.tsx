@@ -29,7 +29,7 @@ const page = () => {
 
                     <div className='mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg'>
                         <Image
-                            src='/assets/images/images.jfif'
+                            src='/assets/images/images.webp'
                             width={4000}
                             height={4000}
                             alt='نقشه  تهران و حومه تهران برای انتخاب بهتر و دقیق تر تالار در تهران'
