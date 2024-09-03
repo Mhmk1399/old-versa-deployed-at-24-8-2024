@@ -147,7 +147,7 @@ const Page = () => {
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">راه های ارتباطی</h2>
         <p className="text-gray-600 my-4">برای ارتباط با ما می‌توانید از یکی از روش‌های زیر استفاده کنید:</p>
         <div className="flex justify-center gap-6 mt-6">
-          <a href="tel:+989123314145" className="text-gray-600 hover:text-blue-500" aria-label="Call us">
+          <a id="call-butom-icon" href="tel:+989123314145" className="text-gray-600 hover:text-blue-500" aria-label="Call us">
             <FaPhoneAlt size={24} />
           </a>
           <a href="https://www.instagram.com/chateau.de.versailles?igsh=dWh1ajNsdnQ1ajF2" className="text-gray-600 hover:text-pink-500" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
