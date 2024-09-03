@@ -75,7 +75,7 @@ export default function RootLayout({
           </Link>
         </div>
         <div className="fixed bottom-2 left-5 flex flex-row space-y-4">
-          <Link href="tel:+989123314145">
+          <Link href="tel:+989123314145" id="call-buttom-fixed-botom">
             <button className="bg-gradient-to-l from-green to-black text-white py-1 px-4 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
               تماس با شاتو دو ورسای
             </button>
